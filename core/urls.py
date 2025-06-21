@@ -29,9 +29,9 @@ urlpatterns = [
     # Schema:
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     # Swagger UI:
-    path('api/schema/swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/docs/swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     # ReDoc UI:
-    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    path('api/docs/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
 
 if config("MODE").lower() == "development":
